@@ -1,0 +1,4 @@
+#!/bin/sh
+
+scp dist/main.js jason@my.dev1.workshop17.co.za:/home/jason/openmembers/public/doors/.
+scp dist/index.html jason@my.dev1.workshop17.co.za:/home/jason/openmembers/public/doors/.
