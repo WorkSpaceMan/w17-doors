@@ -48,9 +48,10 @@ var getFeed = function() {
                 name: vevent.getFirstPropertyValue("summary"),
                 starttime: moment(vevent.getFirstPropertyValue("dtstart").toString()).format(),
                 endtime: moment(vevent.getFirstPropertyValue("dtend").toString()).format(),
-                description: vevent.getFirstPropertyValue("description")
+                description: vevent.getFirstPropertyValue("description"),
+                t: moment(vevent.getFirstPropertyValue("dtstart").toString()).valueOf()
             };
-        });
+        }).sort((a, b) => a.t - b.t);
         var current = events.find(event => moment().isBetween(event.starttime, event.endtime));
         if (current) {
             document.getElementById("primaryEvent").innerHTML = primary_event_template({ moment, event: current });
