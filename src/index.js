@@ -89,7 +89,7 @@ var init = function() {
     blackout();
     getFeed();
     setInterval(getFeed, config.refresh);
-    setInterval(blackout, config.refresh);
+    setInterval(blackout, 30 * 60000); // Every 30 mins
     setReset();
 }
 
