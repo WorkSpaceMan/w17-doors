@@ -1,0 +1,5 @@
+{
+    "refresh": 300000,
+    "api_url": "https://v2.api.workshop17.co.za",
+    "feed_url": "https://my.workshop17.co.za/calendar/room/"
+}
